@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and Align</title>
+    <script src="https://kit.fontawesome.com/5c4607dc13.js"
+        crossorigin="anonymous" >
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .clr {
+            clear: both;
+        }
+
+        body {
+            /* border: 1px solid  black; */
+            padding-top: 1px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4em;
+        }
+        .container {
+            
+            max-width: 960px;
+            margin: 5px auto;
+        }
+
+        .box {
+            background: white;
+            border: 1px solid black;
+            padding: 20px;
+            margin-bottom: 5px;
+
+        }
+        #box-0 {
+            position: sticky;
+            top: 0;
+            background-color: lightgrey;
+        }
+
+        .navbar {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background: #4c6ca0;
+            border-radius: 5px;
+            overflow: auto;
+            
+
+        }
+
+        .navbar li {
+            
+            float: left;
+        }
+
+
+        .navbar li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+        }
+
+        .navbar li a:hover {
+            background: #446190;
+            color: #f4f4f4;
+
+        }
+
+        #box-1 {
+            background-color: azure;
+        }
+
+        #box-2 {
+            background-color:mediumslateblue;
+            float: left;
+            width: 30%;
+            height: 400px
+        }
+
+        #box-3 {
+            background-color: palegreen;
+            float: right;
+            width: 69.5%;
+            height: 400px
+            
+            
+        }
+
+        #box-4 {
+            background-color: rgb(245, 241, 241);
+        }
+
+        #box-5 {
+            background-color: grey;
+        }
+
+        #box-1 h1 {
+            text-align: center;
+        }
+        #box-3 h3 {
+            text-align: left;
+        }
+        #box-5 h3, p{
+            text-align: center;
+        }
+
+        .image1 {
+            display: block;
+            /* margin-left: auto;
+            margin-right: auto; */
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 70%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <div id="box-0" class="box">
+            <ul class = "navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+     <div id="box-1" class="box">
+       <h1>Welcome to my page!</h1>
+     </div>
+     <div id="box-2" class="box">
+       <h3> My name is <strong>Wassim</strong> and I am a programmer</h3>
+       <img class = "image1" src="./images/me.jpg" alt="">
+        </div>
+     <div id="box-3" class="box">
+       <h3>I'm totally into technology , always on the lookout for new products.I recently got into <span class = "red">smart home technology</span> and my home is completely voice activated and automated.</h3>
+       <h3>Chekout <a href="https://www.youtube.com/watch?v=X5YQ4o5LzGM">this video</a> if you want to get started with smart homes</h3>
+       <img class = "image2" src="./images/tech.png" alt="">
+     </div>
+     <div class="clr"></div>
+     <div id="box-4" class="box">
+         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolor odio dolorem enim inventore itaque at? Odit numquam exercitationem architecto ipsum in, laudantium iusto provident aliquam porro iure possimus, molestias quis eum! Corporis cum a veritatis accusantium ex inventore neque unde repellendus provident? Fugit nostrum aperiam aliquid saepe sit sed voluptatum eos odit est. Nam enim vero aperiam, quo nemo fugiat porro in ratione quod esse, doloremque suscipit unde itaque eos ipsa voluptate maiores iure facilis. Ipsam omnis quod eum id dolorum, inventore nesciunt similique eaque distinctio minus at est minima! Accusamus suscipit quam soluta quae, cupiditate enim aliquam tenetur ducimus quibusdam itaque hic, optio veniam tempora ab minima magnam! Voluptatem eius eum atque aperiam deserunt eaque minus sapiente fugiat aliquid cum minima id, delectus consectetur. Reiciendis esse omnis error dolore rerum totam. Iusto distinctio ipsum atque earum, ratione ut eum minus officiis, totam iure autem praesentium at quia quis nam molestiae ipsa repudiandae doloremque pariatur vel, alias incidunt! Ab earum et molestias! Repellendus fugiat libero laboriosam rerum aperiam obcaecati, necessitatibus totam excepturi mollitia aspernatur repellat reprehenderit tempore accusamus doloremque cupiditate vel magnam natus laborum, dignissimos doloribus. Enim consectetur corrupti cum officia, exercitationem est aut odio quaerat eos, distinctio libero minus veniam facilis quisquam suscipit. Similique repellendus ipsam dolor, deleniti excepturi earum eligendi blanditiis saepe eum consequatur aut ratione, illo sunt placeat nam neque hic explicabo porro? Dolorum minus molestiae similique repudiandae neque, corporis itaque nisi ipsum aut aliquid magnam fugiat modi blanditiis ipsam, maxime non. Id magnam, dolorem soluta laboriosam porro a ex, nemo at vel accusantium officia, dicta dolor expedita doloribus? Facere perferendis consequuntur ratione doloribus tempore ducimus id hic natus, quam maiores cumque corporis officiis iste consequatur modi atque non libero optio. Officiis non, eum quia adipisci blanditiis id dolorem ullam, in accusamus minima ratione inventore quisquam! Ullam quisquam provident aspernatur veritatis dolor reprehenderit nobis, numquam porro non vel quia ut dicta architecto repellat et. Deleniti ullam impedit labore architecto doloremque quis consequuntur amet nulla maiores. Quia error explicabo quibusdam cum expedita numquam tempora, accusantium aut eligendi recusandae est nulla, quisquam quo nesciunt voluptates earum soluta consequuntur minus nam officia. Dolore voluptatum aspernatur obcaecati reprehenderit voluptatem non nam deleniti maxime? Vel velit non suscipit tenetur dolore est officia eaque quae dolorum voluptatibus minima molestiae aperiam laboriosam sequi sapiente aliquam veritatis, vero repellat fuga repellendus asperiores! Iste harum nesciunt, quis reprehenderit quidem suscipit pariatur enim explicabo officiis, vitae eaque aperiam! Ut molestias quibusdam voluptatem omnis distinctio assumenda quidem, est nobis molestiae enim ea soluta voluptate ratione odio iste? Quam voluptatem iure rem vero, neque non reiciendis, a id libero tempore, atque ipsam ratione? Aut voluptatem similique quaerat nemo ab iste quisquam dolores esse impedit veniam. Debitis animi nemo inventore consectetur sequi vel, enim doloribus beatae minima nesciunt! Doloremque facere corporis voluptates nemo vero optio aliquid pariatur! Excepturi amet incidunt eveniet ratione maxime cumque voluptatibus aperiam molestias ab accusamus quod aspernatur est qui iste consequuntur iure placeat, officiis ullam a. Voluptatem suscipit nihil obcaecati ad magnam, facere veniam eaque perferendis delectus, vel atque, maxime velit nemo ratione incidunt! Unde id vel repellendus ea ipsam repudiandae sit illum explicabo qui quo numquam officiis error, harum, totam eum, veniam temporibus quidem voluptate in cupiditate nisi! Sapiente incidunt a est, adipisci ut nemo architecto optio laborum porro! Facilis amet dolores reprehenderit ut necessitatibus deserunt fugit modi minus consequatur saepe quo animi voluptas, suscipit esse iste expedita dolore recusandae. Vero tempore doloribus quidem incidunt eveniet nemo recusandae ut, aspernatur amet dolorum, illo nesciunt totam minima animi voluptate ducimus placeat cum. Officia voluptates culpa fugiat, provident excepturi possimus pariatur consequuntur maiores ipsum vitae adipisci error architecto voluptatum ad quos facilis debitis quo perferendis odit ipsam reiciendis sequi. Voluptatem enim similique animi quod. Vitae quos aut nihil dolore provident nulla ad quam optio maiores voluptatum minima facilis enim illo iste quod amet, et qui. Dolore sed non vitae, quos praesentium aut hic rerum et porro fugiat explicabo temporibus laboriosam magnam quisquam, omnis doloribus tenetur? Consectetur iure eveniet assumenda dolor quaerat similique animi minima tempora dicta, rem quis mollitia, facilis illo eaque culpa repellat impedit earum quidem error iusto aliquam ad natus quasi? Sed officiis tempora ab odit quo soluta magni fugit sequi, sunt fuga minus hic dolor labore doloribus non saepe provident, est facere consectetur corporis, iure ea aliquam nam quam! Fugiat, magnam doloribus impedit id similique, nisi maiores ab, eveniet hic magni pariatur incidunt omnis. Eos sit saepe cupiditate voluptatibus ad temporibus laborum id autem nemo voluptas quod obcaecati nisi libero iste facere provident suscipit, deleniti nam minus consequuntur repudiandae dignissimos. Possimus, culpa aut error a necessitatibus praesentium? Assumenda totam perspiciatis, iure alias eius odit vitae fugiat ad repellendus, aliquam adipisci vel quis voluptate accusamus perferendis. Exercitationem blanditiis perferendis, ullam repudiandae atque mollitia impedit accusamus ipsa veniam officiis consectetur tenetur vel consequatur sint ab. Neque, ratione corporis? Fugiat nobis animi tempora deserunt. Tempora molestias, velit in dolores ex fuga quos rem eaque neque explicabo pariatur aliquam nam maiores odit, quia aut, odio repellat quasi saepe facere autem rerum corrupti. Ullam, esse! Saepe soluta ad ducimus nostrum a, odit architecto autem eligendi consectetur accusamus quisquam dicta placeat sint ullam eius accusantium error quo repudiandae beatae facere rem! Praesentium voluptates fuga distinctio! Saepe voluptatum consequatur possimus eveniet sit, tempora quasi sed! Modi, quia iure omnis recusandae nostrum adipisci quidem corrupti ut. Dignissimos, nobis. Sapiente expedita suscipit, voluptatibus minima, dicta quos debitis nostrum dignissimos tenetur in numquam qui, sed magnam ratione porro consequuntur impedit molestias mollitia id doloremque! Possimus necessitatibus labore accusantium atque? Beatae voluptatum odit dolores itaque molestiae vel sed, eius aut nihil, obcaecati, quo commodi adipisci tempora laboriosam! Eum, est necessitatibus? Minus delectus soluta natus deleniti, reiciendis voluptate, nesciunt voluptas corporis amet nulla tempora illo nisi maiores rem velit? Quisquam ea, similique distinctio quam facere necessitatibus iste consequatur recusandae eaque nesciunt cumque dolorum officiis, ipsa ratione atque et cupiditate ipsum. Veniam cupiditate, dolorem repellat hic, assumenda magnam totam exercitationem fugiat eum, esse illo veritatis tenetur voluptatem at! Incidunt autem numquam quidem ut alias dignissimos dolores.</p>
+     </div>
+     <div id="box-5" class="box">
+        <h3 class = "centered">Follow me</h3>
+        <p id = "social_media" class = "centered" >
+                <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQF6zntyadrMYwAAAXc5prZ4_zuXC-x2yyMlXFSYMbMiQhHgUnZnNptpXuii8z2nuMKSecJRU55_5GR8FdPUnwjmNMPr8qhi844geAQHZC11qKrn0wwXW84Haa8THNEaJ8IwklE=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fwassim-haddad-5b8b3623"><span class="fab fa-linkedin"></span></a>
+           
+                <a href="https://www.facebook.com/wass75"><span class="fab fa-facebook"></span></a>
+        </p>
+        
+      </div>
+    </div>
+</body>
+</html>

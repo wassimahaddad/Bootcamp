@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottoms</title>
+    <style>
+        * {
+            margin: 0;            
+            border: none;
+            box-sizing: border-box;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            color: white;
+        }
+
+
+        body {            
+            width: 908px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color:rgb(5, 2, 26)
+            
+        }
+
+
+        #Flat, #Round, #Flat_Ghost, #Round_Ghost {         
+            text-align: center;
+            font-size: 50px;
+        } 
+
+
+        .Flat #Reg {          
+            width: 250px;
+            font-size: 45px;
+            margin-left: 50px;
+            background-color: lightgreen;
+            color: white;
+        }
+
+        .Flat #Reg:hover {
+            background-color: yellowgreen       
+        }
+
+        .Flat #clr {     
+            width: 250px;
+            font-size: 35px;
+            margin-left: 50px;          
+            background-color: red;
+            color: white;
+        }
+
+        .Flat #clr:hover {
+            background-color:darkred
+        }
+
+        .Flat #sub {
+            width: 250px;
+            font-size: 25px;
+            margin-left: 50px;
+            background-color: blue;
+            color: white;
+        }
+
+        .Flat #sub:hover {
+            background-color: darkblue;
+        }
+
+        .Round #Reg {
+            font-size: 45px;            
+            width: 250px;
+            border-radius: 10px;
+            margin-left: 50px;    
+            background-color: orange;
+            color: white;        
+        }
+
+        .Round #Reg:hover {
+            background-color: rgb(155, 107, 19);
+        }
+
+        .Round #clr {
+            font-size: 35px;            
+            width: 250px;
+            border-radius: 10px;
+            margin-left: 50px;         
+            background-color:gold;
+            color: white;  
+        }
+
+        .Round #clr:hover {
+            background-color: darkgoldenrod;
+        }
+
+        .Round #sub {
+            font-size: 25px;            
+            width: 250px;
+            border-radius: 10px;
+            margin-left: 50px;       
+            background-color: rgb(102, 99, 99);
+            color: white;     
+        }
+
+        .Round #sub:hover {
+            background-color: rgb(54, 53, 53);
+        }
+
+        .Flat_Ghost #Reg {            
+            width: 250px;
+            font-size: 45px;
+            margin-left: 50px;
+            border: 1px solid lightgreen;
+            background-color:rgb(5, 2, 26)
+        }
+
+        .Flat_Ghost #Reg:hover {
+            background-color:lightgreen ;
+        }
+
+        .Flat_Ghost #clr {            
+            width: 250px;
+            font-size: 35px;
+            margin-left: 50px;
+            border: 1px solid red;
+            background-color:rgb(5, 2, 26)
+        }
+
+        .Flat_Ghost #clr:hover {
+            background-color: red;
+        }
+
+        .Flat_Ghost #sub {            
+            width: 250px;
+            font-size: 25px;
+            margin-left: 50px;
+            border: 1px solid blue;
+            background-color:rgb(5, 2, 26)
+        }
+
+        .Flat_Ghost #sub:hover {
+            background-color: blue;
+        }
+
+        .Round_Ghost #Reg {
+            font-size: 45px;            
+            width: 250px;
+            border-radius: 10px;
+            margin-left: 50px;
+            border: 1px solid orange;
+            background-color:rgb(5, 2, 26)
+        }
+
+        .Round_Ghost #Reg:hover {
+            background-color: orange;
+        }
+
+        .Round_Ghost #clr {
+            font-size: 35px;            
+            width: 250px;
+            border-radius: 10px;
+            margin-left: 50px;
+            border: 1px solid gold;
+            background-color:rgb(5, 2, 26)
+        }
+
+        .Round_Ghost #clr:hover {
+            background-color: gold ;
+        }
+
+        .Round_Ghost #sub {
+            font-size: 25px;            
+            width: 250px;
+            border-radius: 10px;
+            margin-left: 50px;
+            border: 1px solid rgb(102, 99, 99);
+            background-color:rgb(5, 2, 26)
+        }
+
+        .Round_Ghost #sub:hover {
+            background-color: rgb(102, 99, 99);
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="Flat">Flat</div>
+    <div class = "Flat">
+
+        <button id = "Reg" >Register</button>
+        <button id = "clr" >Clear</button>
+        <button id = "sub" >Submit</button>
+    </div>
+    <div id="Round">Round</div>
+    <div class = "Round">
+        <button id = "Reg" >Register</button>
+        <button id = "clr" >Clear</button>
+        <button id = "sub" >Submit</button>
+    </div>
+    <div id="Flat_Ghost">Flat Ghost</div>
+    <div class = "Flat_Ghost">
+        <button id = "Reg" >Register</button>
+        <button id = "clr" >Clear</button>
+        <button id = "sub" >Submit</button>
+    </div>
+    <div id="Round_Ghost">Round Ghost</div>
+    <div class = "Round_Ghost">
+        <button id = "Reg" >Register</button>
+        <button id = "clr" >Clear</button>
+        <button id = "sub" >Submit</button>
+    </div>
+
+</body>
+</html>

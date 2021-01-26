@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and Align</title>
+    <script src="https://kit.fontawesome.com/5c4607dc13.js"
+        crossorigin="anonymous" >
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .clr {
+            clear: both;
+        }
+
+        body {
+            /* border: 1px solid  black; */
+            padding-top: 1px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4em;
+        }
+        .container {
+            
+            max-width: 960px;
+            margin: 5px auto;
+        }
+
+        .box {
+            background: white;
+            border: 1px solid black;
+            padding: 20px;
+            margin-bottom: 5px;
+
+        }
+
+        #box-1 {
+            background-color: azure;
+        }
+
+        #box-2 {
+            background-color:mediumslateblue;
+            float: left;
+            width: 30%;
+            height: 400px
+        }
+
+        #box-3 {
+            background-color: palegreen;
+            float: right;
+            width: 69.5%;
+            height: 400px
+            
+            
+        }
+
+        #box-4 {
+            background-color: grey;
+        }
+
+        #box-1 h1 {
+            text-align: center;
+        }
+        #box-3 h3 {
+            text-align: left;
+        }
+        #box-4 h3, p{
+            text-align: center;
+        }
+
+        .image1 {
+            display: block;
+            /* margin-left: auto;
+            margin-right: auto; */
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 70%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+     <div id="box-1" class="box">
+       <h1>Welcome to my page!</h1>
+     </div>
+     <div id="box-2" class="box">
+       <h3> My name is <strong>Wassim</strong> and I am a programmer</h3>
+       <img class = "image1" src="./images/me.jpg" alt="">
+        </div>
+     <div id="box-3" class="box">
+       <h3>I'm totally into technology , always on the lookout for new products.I recently got into <span class = "red">smart home technology</span> and my home is completely voice activated and automated.</h3>
+       <h3>Chekout <a href="https://www.youtube.com/watch?v=X5YQ4o5LzGM">this video</a> if you want to get started with smart homes</h3>
+       <img class = "image2" src="./images/tech.png" alt="">
+     </div>
+     <div class="clr"></div>
+     <div id="box-4" class="box">
+        <h3 class = "centered">Follow me</h3>
+        <p id = "social_media" class = "centered" >
+                <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQF6zntyadrMYwAAAXc5prZ4_zuXC-x2yyMlXFSYMbMiQhHgUnZnNptpXuii8z2nuMKSecJRU55_5GR8FdPUnwjmNMPr8qhi844geAQHZC11qKrn0wwXW84Haa8THNEaJ8IwklE=&originalReferer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fwassim-haddad-5b8b3623"><span class="fab fa-linkedin"></span></a>
+           
+                <a href="https://www.facebook.com/wass75"><span class="fab fa-facebook"></span></a>
+        </p>
+        
+      </div>
+    </div>
+</body>
+</html>
