@@ -202,6 +202,11 @@
     padding-right: 35px;
 }
 
+#order-now a {
+    color: white;
+    text-decoration: none;
+}
+
 
 
 /********************** Safety Section ****************************/
@@ -423,6 +428,7 @@
     width: 110px;
     margin-top: 110px;
     float: left;
+    
 }
 
 #safety-order-now {
@@ -432,7 +438,16 @@
     padding: 10px;
     border-radius: 20px;
     float: left;
+    
+
+ 
 }
+
+#safety-order-now a {
+    text-decoration: none;
+    color: black;
+}
+
 
 
 /* ********************* Page Three *************************** */
@@ -522,6 +537,10 @@
     float: left;
 }
 
+#perf-order-now a {
+    text-decoration: none;
+    color: black;
+}
 
 
 .perf-footer2 {   
