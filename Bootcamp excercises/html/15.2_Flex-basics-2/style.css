@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.flex-container {
+    display: flex;
+    background:burlywood;
+    align-items: center ;
+    justify-content: center;
+    height: 50vh;
+     
+}
+
+.flex-container div {       
+    width:100px;
+    height:100px; 
+    
+       
+}
+
+.item1 {
+    
+    background:red;
+}
+.item2 {
+
+    background:green;
+}
+.item3 {
+    
+    background: blue;
+}
