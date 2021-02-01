@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Border</title>
+    <style>
+
+        .frame {          
+        
+            width: 500px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+        }
+
+        .box {
+            padding: 40px;
+            border: 4px solid orangered;
+            position: relative;
+        }
+
+        .box:before, .box:after {
+            content: '';
+            position: absolute;
+            background: black;
+           
+          
+        }
+  
+        .box:before {
+            left: 2rem;
+            right: 2rem;
+            top: -0.4rem; 
+            bottom: -0.5rem;
+        
+        }
+  
+        .box:after{
+            left: -0.3rem;
+            right: -0.3em;
+            top: 2rem;
+            bottom: 2rem;
+        }
+
+        .text {
+            position: relative;
+            z-index: 1;
+            color:white;
+            font-size: 30px;
+        }
+
+        
+                      
+        
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <div class="box">
+             <div class="text">Cool Border</div>
+        </div>
+    </div>
+</body>
+</html>

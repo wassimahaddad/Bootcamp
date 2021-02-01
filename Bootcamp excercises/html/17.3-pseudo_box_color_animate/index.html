@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo box color</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .parent {
+            width:200px;
+            position: relative;
+            background: grey;
+            height:400px;
+            
+        }
+
+        .parent:after {
+            content:'';
+            position: absolute;
+            top:0;
+            left:200px;
+            width: 100%;
+            height:100%;
+            background:rebeccapurple;
+                        
+        }
+
+        .parent:hover {
+            background: blue;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <a href="#"><div class="parent"></div></a>
+    
+    
+</body>
+</html>
