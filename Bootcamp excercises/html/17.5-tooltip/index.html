@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tooltip</title>
 
     <style>
-        .tooltip {
+      .tooltip {
         position: relative;
-        }
+      }
 
-        .tooltip:hover {
+      .tooltip:hover {
         color: #c00;
         text-decoration: none;
-        }
+      }
 
-        .tooltip:hover::after {
-            content: attr(title);
-            position: absolute;
-            background: black;
-            left: 1rem;
-            bottom: 1.35rem;
-            padding: .3rem 1rem;  
-            border-radius: .5rem;            
-            color: white;   
-            white-space: nowrap;        
-        }
+      .tooltip:hover::after {
+        content: attr(title);
+        position: absolute;
+        background: black;
+        left: 1rem;
+        bottom: 1.35rem;
+        padding: 0.3rem 1rem;
+        border-radius: 0.5rem;
+        color: white;
+        white-space: nowrap;
+      }
 
-        .tooltip:hover::before {
-            content: "";
-            position: absolute;
-            bottom: 1rem;
-            left: 2rem;
-            border: solid;
-            border-color: black transparent;
-            border-width: 0.4rem 0.4rem 0 0.4rem;         
-            
-        }
-
+      .tooltip:hover::before {
+        content: "";
+        position: absolute;
+        bottom: 1rem;
+        left: 2rem;
+        border: solid;
+        border-color: black transparent;
+        border-width: 0.4rem 0.4rem 0 0.4rem;
+      }
     </style>
-</head>
-<body>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam fugit dignissimos consectetur obcaecati ratione, maxime saepe! Rerum, ipsa, cupiditate, alias beatae ut magni excepturi at dolorem sit dignissimos officia laborum est quod temporibus. Corrupti fugiat dolorum, quia similique fugit perferendis sint optio veniam <a href="#" class="tooltip" title="useless tooltip">repellendus</a></p> deserunt numquam, quasi praesentium quod enim animi, id temporibus eius maiores reprehenderit atque a. Ab dolore corporis maiores officia sapiente aut commodi, odio quos quam voluptates esse. Dolorum, a distinctio quos, fugiat autem dignissimos optio incidunt, ratione atque quae repudiandae laborum illo neque cumque aliquam sed nostrum doloribus? Repellendus, quibusdam dolorum. Debitis dolores distinctio totam sequi.</p>
-    <p>Vestibulum mollis mauris <a href="#" class="tooltip" title="useless tooltip">pellentesque</a></p>
-</body>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam fugit
+      dignissimos consectetur obcaecati ratione, maxime saepe! Rerum, ipsa,
+      cupiditate, alias beatae ut magni excepturi at dolorem sit dignissimos
+      officia laborum est quod temporibus. Corrupti fugiat dolorum, quia
+      similique fugit perferendis sint optio veniam
+      <a href="#" class="tooltip" title="useless tooltip">repellendus</a>
+      deserunt numquam, quasi praesentium quod enim animi, id temporibus eius
+      maiores reprehenderit atque a. Ab dolore corporis maiores officia sapiente
+      aut commodi, odio quos quam voluptates esse. Dolorum, a distinctio quos,
+      fugiat autem dignissimos optio incidunt, ratione atque quae repudiandae
+      laborum illo neque cumque aliquam sed nostrum doloribus? Repellendus,
+      quibusdam dolorum. Debitis dolores distinctio totam sequi.
+    </p>
+    <p>
+      Vestibulum mollis mauris
+      <a href="#" class="tooltip" title="useless tooltip">pellentesque</a>
+    </p>
+  </body>
 </html>

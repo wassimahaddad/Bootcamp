@@ -1,43 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pseudo box color</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        .parent {
-            width:200px;
-            position: relative;
-            background: grey;
-            height:100vh;
-            
-        }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .parent {
+        width: 200px;
+        position: relative;
+        background: grey;
+        height: 100vh;
+      }
 
-     .parent:after {
-            content:'';
-            position: absolute;
-            top:0;
-            left:0;
-            width: 200%;
-            height:100%;
-            background:rebeccapurple;
-            z-index: -1;
-            
-        }
-
-        
-
+      .parent:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background: rebeccapurple;
+        z-index: -1;
+      }
     </style>
-</head>
-<body>
-
-    <div class="parent">  
-    </div>
-    
-</body>
+  </head>
+  <body>
+    <div class="parent"></div>
+  </body>
 </html>
