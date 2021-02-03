@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid-1</title>
+  </head>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item {
+      height: 6rem;
+      border-radius: 10px;
+      background: #f4f4f4;
+    }
+
+    .red {
+      background: red;
+      grid-column: 1 / span 2;
+    }
+    .blue {
+      background: blue;
+      grid-column: 3 / span 2;
+    }
+    .green {
+      background: green;
+      grid-column: 1 / span 1;
+    }
+    .purple {
+      background: purple;
+      grid-column: 2 / span 3;
+    }
+    .yellow {
+      background: yellow;
+      grid-column: 1 / span 4;
+    }
+  </style>
+  <body>
+    <div class="grid">
+      <div class="item red"></div>
+      <div class="item blue"></div>
+      <div class="item green"></div>
+      <div class="item purple"></div>
+      <div class="item yellow"></div>
+    </div>
+  </body>
+</html>

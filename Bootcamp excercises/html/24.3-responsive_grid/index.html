@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Grid</title>
+  </head>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-areas:
+        "red red red red"
+        "blue green green purple"
+        "yellow yellow yellow yellow";
+      grid-gap: 1rem;
+    }
+
+    .item {
+      padding: 3rem;
+      border-radius: 10px;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 2rem;
+    }
+
+    .red {
+      grid-area: red;
+      background: red;
+    }
+    .blue {
+      grid-area: blue;
+      background: blue;
+    }
+    .green {
+      grid-area: green;
+      background: green;
+    }
+
+    li {
+      list-style: none;
+    }
+    .purple {
+      grid-area: purple;
+      background: purple;
+    }
+    .yellow {
+      grid-area: yellow;
+      background: yellow;
+    }
+
+    @media (min-width: 320px) and (max-width: 500px) {
+      .grid {
+        display: grid;
+        grid-template-areas:
+          "red "
+          "blue "
+          "green"
+          "purple"
+          "yellow ";
+        grid-gap: 1rem;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .grid {
+        display: grid;
+        grid-template-areas:
+          "red red red red"
+          "blue green green green"
+          "purple purple purple purple"
+          "yellow yellow yellow yellow";
+        grid-gap: 1rem;
+      }
+    }
+  </style>
+  <body>
+    <div class="grid">
+      <div class="item red">Header</div>
+      <div class="item blue">Sidebar</div>
+      <div class="item green">
+        <ul>
+          <li>Content</li>
+          <li>
+            More content than we had before so this column is now quite tall
+          </li>
+        </ul>
+      </div>
+      <div class="item purple">Sidebar2</div>
+      <div class="item yellow">Footer</div>
+    </div>
+  </body>
+</html>
