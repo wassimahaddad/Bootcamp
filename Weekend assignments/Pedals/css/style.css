@@ -7,7 +7,6 @@
 :root {
   --pedal-font: 20px;
   --primary-font: Arial, Helvetica, sans-serif;
-  --notes-color: #444;
   --primary-text-color: #ff7400;
   --secondary-text-color: white;
 }
@@ -26,7 +25,9 @@
   color: var(--primary-text-color);
   font-family: var(--primary-font);
   font-size: 80px;
-  padding-top: 50px;
+  padding-top: 100px;
+  position: sticky;
+  top: 0;
 }
 
 .header span {
@@ -44,14 +45,35 @@
   background: #666;
   border: 1px solid black;
   border-radius: 15px;
+  position: sticky;
+  top: 250px;
 }
 .header-text span {
   color: var(--primary-text-color);
 }
 
+.footer-text {
+  display: inline-block;
+  color: var(--secondary-text-color);
+  font-family: var(--primary-font);
+  font-weight: 100;
+  font-size: 50px;
+  padding: 30px;
+  background: #666;
+  border: 1px solid black;
+  border-radius: 15px;
+  position: sticky;
+  top: 900px;
+  left: 530px;
+}
+
+.footer-text span {
+  color: var(--primary-text-color);
+}
+
 /* Peal Boxes */
 
-.pedal-box {
+.pedal-grid {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
   align-items: center;
@@ -72,21 +94,13 @@
   color: white;
 }
 
-/* .music-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 20vh;
-  color: white;
-} */
-
 /* Tooltip text*/
 
-.pedal-text {
+.pedal-box {
   position: relative;
 }
 
-.pedal-box .pedal-text:hover::after {
+.pedal-grid .pedal-box:hover::after {
   content: attr(text);
   position: absolute;
   background: white;
@@ -101,7 +115,7 @@
   z-index: 2;
 }
 
-.pedal-box .pedal-text:hover::before {
+.pedal-grid .pedal-box:hover::before {
   content: "";
   position: absolute;
   left: 335px;
@@ -134,7 +148,7 @@
 .toggler + .youtube + .notube {
   display: none;
 }
-.pedal-text .toggler:checked ~ .youtube {
+.pedal-box .toggler:checked ~ .youtube {
   display: initial;
 }
 
@@ -142,7 +156,34 @@
 .notes {
   animation: notes 2s infinite linear;
   animation-play-state: paused;
-  color: var(--notes-color);
+}
+
+.musicnotes-1 .notes {
+  color: white;
+}
+.musicnotes-2 .notes {
+  color: purple;
+}
+.musicnotes-3 .notes {
+  color: brown;
+}
+.musicnotes-4 .notes {
+  color: black;
+}
+.musicnotes-5 .notes {
+  color: red;
+}
+.musicnotes-6 .notes {
+  color: grey;
+}
+.musicnotes-7 .notes {
+  color: green;
+}
+.musicnotes-8 .notes {
+  color: blue;
+}
+.musicnotes-9 .notes {
+  color: indigo;
 }
 
 .note-1,
@@ -157,23 +198,23 @@
   z-index: -1;
 }
 
-.pedal-text:hover .notes {
+.pedal-box:hover .notes {
   animation-play-state: running;
   z-index: 1;
 }
 
-.musicnotes .note-1 {
+.note-1 {
   animation-delay: 0.5s;
 }
-.musicnotes .note-2 {
+.note-2 {
   animation-delay: 1s;
 }
 
-.musicnotes .note-3 {
+.note-3 {
   animation-delay: 1.5s;
 }
 
-.musicnotes .note-4 {
+.note-4 {
   animation-delay: 2s;
 }
 
