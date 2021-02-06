@@ -17,6 +17,8 @@
   background-attachment: fixed;
 }
 
+/* Header Text */
+
 .header {
   display: inline-block;
   margin: 0 500px;
@@ -47,6 +49,8 @@
   color: var(--primary-text-color);
 }
 
+/* Peal Boxes */
+
 .pedal-box {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
@@ -68,13 +72,13 @@
   color: white;
 }
 
-.music-container {
+/* .music-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 20vh;
   color: white;
-}
+} */
 
 /* Tooltip text*/
 
@@ -97,6 +101,44 @@
   z-index: 2;
 }
 
+.pedal-box .pedal-text:hover::before {
+  content: "";
+  position: absolute;
+  left: 335px;
+  top: 5rem;
+  border-top: 50px solid transparent;
+  border-right: 100px solid white;
+  border-bottom: 50px solid transparent;
+  border-width: 1rem 1rem 1rem 0;
+}
+
+.youtube {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  align-items: center;
+  display: none;
+}
+
+.toggler {
+  position: absolute;
+  top: 240px;
+  left: 110px;
+  z-index: 2;
+  cursor: pointer;
+  width: 40%;
+  height: 40%;
+  opacity: 0;
+}
+
+.toggler + .youtube + .notube {
+  display: none;
+}
+.pedal-text .toggler:checked ~ .youtube {
+  display: initial;
+}
+
+/* Animation */
 .notes {
   animation: notes 2s infinite linear;
   animation-play-state: paused;
@@ -152,17 +194,6 @@
     transform: scale(1.5) translate(100%, -100%);
     opacity: 0;
   }
-}
-
-.pedal-box .pedal-text:hover::before {
-  content: "";
-  position: absolute;
-  left: 335px;
-  top: 5rem;
-  border-top: 50px solid transparent;
-  border-right: 100px solid white;
-  border-bottom: 50px solid transparent;
-  border-width: 1rem 1rem 1rem 0;
 }
 
 .footer {
