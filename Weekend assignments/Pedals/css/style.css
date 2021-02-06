@@ -64,7 +64,7 @@
   border-radius: 15px;
   position: sticky;
   top: 900px;
-  left: 530px;
+  left: 550px;
 }
 
 .footer-text span {
@@ -104,7 +104,7 @@
   content: attr(text);
   position: absolute;
   background: white;
-  left: 350px;
+  left: 360px;
   top: 1rem;
   padding: 0.3rem 1rem;
   border-radius: 0.5rem;
@@ -118,7 +118,7 @@
 .pedal-grid .pedal-box:hover::before {
   content: "";
   position: absolute;
-  left: 335px;
+  left: 345px;
   top: 5rem;
   border-top: 50px solid transparent;
   border-right: 100px solid white;
