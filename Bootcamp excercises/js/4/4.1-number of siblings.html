@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="4.1_number_of_siblings.js" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numSiblings = prompt("How many siblings do you have?");
+      if (Number(numSiblings) === 1) {
+        console.log("1 sibling");
+      } else if (numSiblings > 1) {
+        console.log("More than one sibling");
+      } else {
+        console.log("No Siblings");
+      }
+    </script>
+  </body>
+</html>
+
+<!-- Double equal sign "==" compares values of what's on its left side and right side, Triple equal sign "===" compares values and type of what's on its left side and right side. prompt function receives a sting value and so the type of the numSblings variable was initially a strings (we can use typeof command to verify that) numSblings needed to be converted into a number for the "===" to work as it compares the type as well and for that we used the Number() method -->
