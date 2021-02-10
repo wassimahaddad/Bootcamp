@@ -19,6 +19,8 @@ people.pop();
 
 people.splice(0, 0, "Matt");
 
+// unshift adds items to begining of array
+
 // ----------------------- 5 -----------------------
 
 people.push("Wassim");
