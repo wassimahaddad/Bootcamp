@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <p>Please enter your age</p>
+      <input type="text" name="age" maxlength="3" />
+      <button>Check Age</button>
+    </div>
+  </body>
+  <script>
+    const age = document.querySelector("input[name='age']");
+    const div = document.querySelector(".container");
+    const button = document.querySelector("button");
+    const drink = document.createElement("p");
+    div.appendChild(drink);
+    const handleInput = () => {
+      if (parseInt(age.value) >= 18) {
+        drink.textContent = "You can drink";
+      } else {
+        drink.textContent = "You're too young'";
+      }
+    };
+    button.addEventListener("click", handleInput);
+  </script>
+</html>

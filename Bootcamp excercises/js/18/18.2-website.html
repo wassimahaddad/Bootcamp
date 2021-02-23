@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Website</title>
+  </head>
+  <body>
+    <button id="btn" class="number">Click to create a page!</button>
+  </body>
+  <script>
+    const btn = document.querySelector("#btn");
+    btn.addEventListener("click", createPage);
+
+    function createPage() {
+      document.body.style.backgroundColor = "grey";
+      document.body.style.width = "500px";
+      const header = document.createElement("h1");
+      header.textContent = "Welcome to the JS generated page";
+      header.classList.add("general");
+      document.body.appendChild(header);
+      const myImage = document.createElement("img");
+      myImage.src = "https://picsum.photos/500";
+      myImage.alt = "Nice photo";
+      myImage.classList.add("general");
+      document.body.appendChild(myImage);
+      const myText = document.createElement("p");
+      myText.textContent =
+        "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sint porro totam dolorum, voluptate animi nihil nobis ad quae quasi quidem eaque blanditiis fugiat inventore eveniet illo non amet voluptas? Atque fugit ipsam itaque autem voluptatem quidem laborum amet ipsa labore dolore sed numquam nisi beatae accusamus libero illo, incidunt voluptate quam in, quisquam hic eaque maiores possimus! Dolores dolorum alias voluptate error cum assumenda. Optio facilis aliquid voluptatibus repudiandae fugit tenetur quisquam consequuntur commodi quam cum soluta molestiae ex, quibusdam, sint magnam debitis. Officia iste eum consequuntur modi molestiae! Cupiditate repellendus praesentium quia nisi architecto maxime ea iste soluta?";
+      myText.classList.add("general");
+      document.body.appendChild(myText);
+      btn.remove();
+    }
+  </script>
+</html>

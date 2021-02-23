@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Elements</title>
+  </head>
+  <body>
+    <div class="all_divs" id="myFirstDiv"></div>
+    <div class="all_divs" id="mySecondDiv"></div>
+    <div class="all_divs" id="myThridDiv"></div>
+    <div class="all_divs" id="myFourthDiv"></div>
+  </body>
+  <script>
+    const myFirstDiv = document.querySelector("#myFirstDiv");
+    const mySecondDiv = document.querySelector("#mySecondDiv");
+    const myThirdDiv = document.querySelector("#myThirdDiv");
+    const myFourthDiv = document.querySelector("#myFourthDiv");
+    const all_divs = document.querySelectorAll(".all_divs");
+    //! option1 - downside - element by element
+    // const [myFirstDiv, mySecondDiv, myThirdDiv, myFourthDiv] = [...all-divs]
+
+    //option2
+    // const myMap = new Map();
+    // all_divs.forEach((el) => elements.set(el.id, el.innerHTML));
+
+    // option3
+    const elements = {};
+    all_divs.forEach((el) => elements[(el.id = el.innerHTML)]);
+  </script>
+</html>

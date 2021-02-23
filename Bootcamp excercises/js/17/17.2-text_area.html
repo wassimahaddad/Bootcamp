@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <h2>Why are you interested in this position</h2>
+    <p><textarea id="textbox" cols="30" rows="10"></textarea></p>
+    <button onclick="checkCharNum()">Click here!</button>
+    <p class="message"></p>
+    <script>
+      function checkCharNum() {
+        const text = document.querySelector("#textbox");
+        if (text.value.length < 100) {
+          document.querySelector(".message").textContent =
+            "Less than a 100 characters";
+        } else {
+          document.querySelector(".message").textContent = "Thank you!";
+        }
+      }
+    </script>
+  </body>
+</html>

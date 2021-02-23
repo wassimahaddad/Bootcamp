@@ -54,6 +54,3 @@ for (let a = 0; a < letters.length; a++) {
   }
   a = a + 1;
 }
-
-console.log(splitArr);
-console.log(result);

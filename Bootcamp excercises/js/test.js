@@ -1,14 +1,18 @@
-function percentageOfWorld1(pop) {
-  return (pop / 7900) * 100;
+function myFunc() {
+  let i;
+  const funcs = [];
+
+  for (i = 0; i < 3; i++) {
+    console.log(i);
+    const log = () => {
+      return `i is: ${i}`;
+    };
+
+    funcs.push(log);
+    //setTimeout(log, 100);
+  }
+  return funcs;
 }
-israel = percentageOfWorld1(9);
-us = percentageOfWorld1(330);
-canada = percentageOfWorld1(38);
-console.log(israel, us, canada);
 
-const percentageOfWorld2 = (pop) => (pop / 7900) * 100;
-
-israel = percentageOfWorld2(9);
-us = percentageOfWorld2(330);
-canada = percentageOfWorld2(38);
-console.log(israel, us, canada);
+const logs = myFunc();
+console.log(logs[0](), logs[1](), logs[2]());

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smileys</title>
+    <style>
+      div {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="get" type="How many smileys do you want to see?" />
+    <button id="butt" class="number">Submit!</button>
+    <div class="results"></div>
+    <p class="output"></p>
+  </body>
+  <script>
+    const btn = document.querySelector("#butt");
+    btn.addEventListener("click", printSmileys);
+
+    function printSmileys() {
+      const myinput = document.querySelector("#get").value;
+      const parsed = parseInt(myinput);
+      const smileys = document.createElement("div");
+      if (parsed * 3) {
+        for (let i = 0; i < parsed; i++) {
+          smileys.textContent = "";
+          document.querySelector(".output").textContent = "";
+          smileys.textContent = "🙂";
+          smileys.classList.add("result");
+          document.body.appendChild(smileys);
+        }
+      } else {
+        smileys.textContent = "";
+        document.querySelector(".output").textContent = "Invalid input";
+      }
+    }
+  </script>
+</html>
