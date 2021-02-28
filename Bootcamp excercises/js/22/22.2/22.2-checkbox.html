@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox Photo</title>
+    <style>
+      .container {
+        width: 500px;
+        padding: 50px;
+      }
+
+      img {
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="checkbox" />Click here to reveal photo!
+      <img src="" alt="" />
+    </div>
+  </body>
+  <script>
+    const cBox = document.querySelector("input");
+    const image = document.querySelector("img");
+    cBox.addEventListener("change", () => {
+      if (cBox.checked) {
+        image.src = "https://picsum.photos/500";
+      } else {
+        image.remove();
+      }
+    });
+  </script>
+</html>
