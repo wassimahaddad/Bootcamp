@@ -23,22 +23,10 @@ function makeAllCaps(arr) {
         1000
       );
     } else {
-      setTimeout(() => resolve(`Array was uppercased: [${arr}]`), 1000);
+      setTimeout(() => resolve(arr), 1000);
     }
   });
 }
-
-makeAllCaps(["one", "two", "three", "four"])
-  .then(function (message) {
-    console.log(message);
-    return makeAllCaps(["one", "two", 3, "three", "four"]);
-  })
-  .then(function (message) {
-    console.log(message);
-  })
-  .catch((message) => {
-    console.log(message);
-  });
 
 // -------------------------------------------------------------->
 
@@ -46,9 +34,9 @@ function sortWords(arr) {
   return new Promise(function (resolve, reject) {
     const regExChar = /[a-zA-z]/g;
     let notChar = 0;
-    for (let i = 0; i < arr.length; i++) {
-      if (!regExChar.test(arr[i])) {
-        notChar = i;
+    for (let j = 0; j < arr.length; j++) {
+      if (!regExChar.test(arr[j])) {
+        notChar = j;
       } else {
         notChar = notChar;
       }
@@ -61,22 +49,31 @@ function sortWords(arr) {
     } else {
       arr = arr.sort();
 
-      setTimeout(
-        () => resolve(`Array was sorted alphabetically: [${arr}]`),
-        1000
-      );
+      setTimeout(() => resolve(arr), 1000);
     }
   });
 }
 
-sortWords(["one", "two", "three", "four"])
-  .then(function (message) {
-    console.log(message);
-    return sortWords(["one", 1, "two", "three", "four"]);
+makeAllCaps(["one", "two", "three", "four"])
+  .then(function (res) {
+    console.log(res);
+    return sortWords(res);
   })
-  .then(function (message) {
-    console.log(message);
+  .then(function (res) {
+    console.log(res);
   })
-  .catch((message) => {
-    console.log(message);
+  .catch((error) => {
+    console.log(error);
+  });
+
+makeAllCaps(["one", "two", 1, "three", "four"])
+  .then(function (res) {
+    console.log(res);
+    return sortWords(res);
+  })
+  .then(function (res) {
+    console.log(res);
+  })
+  .catch((error) => {
+    console.log(error);
   });
