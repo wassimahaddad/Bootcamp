@@ -11,8 +11,8 @@ search.addEventListener("click", () => {
   console.log(username);
   console.log(username.length);
   document.querySelector(".error-message").textContent = "";
-  if (username.length != 0 && !searchDB.includes(username)) {
-    searchDB.push(username);
+  if (username.length != 0 && !searchDB.includes(username.toLowerCase())) {
+    searchDB.push(username.toLowerCase());
     gitUsers(username);
   } else {
     document.querySelector(".error-message").textContent =
@@ -25,7 +25,7 @@ async function gitUsers(username) {
   const result = await fetch(`${baseEndpoint}/${username}`);
   const data = await result.json();
   const image = await fetch(data.avatar_url);
-  myObj.name = data.name;
+  myObj.name = data.name || data.login;
   myObj.repos = data.public_repos;
   myObj.image = image.url;
   myObj.gitPage = data.html_url;
@@ -34,7 +34,7 @@ async function gitUsers(username) {
     createCard();
   } else {
     document.querySelector(".error-message").textContent =
-      "user does not exist, try again";
+      "user does not exist, try another";
   }
 }
 
