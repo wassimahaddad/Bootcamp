@@ -4,16 +4,49 @@ body {
 }
 .display {
   display: block;
-  width: 50px;
 }
 
-.line {
-  display: flex;
+.sort {
+  padding: 10px;
+}
+
+.line1 {
+  display: block;
+  padding-bottom: 10px;
+}
+
+.line1 div {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* .important {
+  width: 110px;
+} */
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.line1 li {
+  display: inline-block;
+  width: 200px;
+}
+.line2 {
+  display: block;
+}
+
+.line2 div {
+  display: inline-block;
 }
 
 li {
   list-style: none;
-  /* margin-left: 5px; */
+  margin-left: 5px;
+}
+
+.task-name {
+  width: 300px;
 }
 
 .task-actions {

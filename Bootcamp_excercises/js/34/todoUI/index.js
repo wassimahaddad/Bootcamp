@@ -43,7 +43,9 @@ function editItems(el) {
 // apply
 function applyChanges(el) {
   const input = el.previousSibling.value;
-  const index = el.previousSibling.previousSibling.previousSibling.textContent;
+  const index =
+    el.previousSibling.previousSibling.previousSibling.previousSibling
+      .previousSibling.previousSibling.textContent;
   console.log(input);
   console.log(index);
   todoList[index - 1].task = input;
@@ -51,26 +53,65 @@ function applyChanges(el) {
 }
 
 // check/uncheck
-let isCrossed = false;
 function checkUncheck(el) {
-  if (isCrossed === false) {
-    el.nextSibling.classList.add("cross");
-    isCrossed = true;
-    let index = el.previousSibling.textContent;
+  let index = el.previousSibling.textContent;
+  if (el.checked === true) {
     todoList[index - 1].isCompleted = true;
   } else {
-    el.nextSibling.classList.remove("cross");
-    isCrossed = false;
+    todoList[index - 1].isCompleted = false;
   }
 }
+//sort by completed
+function sortCompleted() {
+  let sortTempArr = [];
+  for (let i = 0; i < todoList.length; i++) {
+    if (todoList[i].isCompleted === false) {
+      sortTempArr.push(todoList[i]);
+      console.log(todoList[i].isCompleted);
+    }
+  }
+  for (let i = 0; i < todoList.length; i++) {
+    if (todoList[i].isCompleted === true) {
+      sortTempArr.push(todoList[i]);
+      console.log(todoList[i].isCompleted);
+    }
+  }
+  todoList = sortTempArr;
+  list();
+}
+
+//set important
+isImportant = false;
+function setImportant() {
+  isImportant = true;
+}
+// sort by important
+function sortImportant() {
+  let sortTempArr = [];
+  for (let i = 0; i < todoList.length; i++) {
+    if (todoList[i].isImportant === true) {
+      sortTempArr.push(todoList[i]);
+      console.log(todoList[i].isImportant);
+    }
+  }
+  for (let i = 0; i < todoList.length; i++) {
+    if (todoList[i].isImportant === false) {
+      sortTempArr.push(todoList[i]);
+      console.log(todoList[i].isImportant);
+    }
+  }
+  todoList = sortTempArr;
+  list();
+}
+
 // list items
 function list() {
   document.querySelector(".display").innerHTML = "";
   todoList.map((obj) => {
-    const line = document.createElement("div");
+    const line1 = document.createElement("div");
     const displayList = document.querySelector(".display");
-    displayList.appendChild(line);
-    line.className = "line";
+    displayList.appendChild(line1);
+    line1.className = "line1";
 
     // delete
     const deleteTask = document.createElement("button");
@@ -83,10 +124,15 @@ function list() {
     editTask.classList.add("task-actions");
     editTask.addEventListener("click", (e) => editItems(e.target));
 
-    // checkbox
+    // completed checkbox
     const check = document.createElement("input");
     check.type = "checkbox";
     check.classList.add("checkbox");
+    if (obj.isCompleted === true) {
+      check.checked = true;
+    } else {
+      check.checked = false;
+    }
     check.addEventListener("change", (e) => checkUncheck(e.target));
 
     //task number
@@ -97,18 +143,31 @@ function list() {
     const item = document.createElement("li");
     item.textContent = obj.task;
     item.classList.add(".task-name");
+    // created
+    const created = document.createElement("div");
+    created.textContent = obj.created;
+    // important
+    const important = document.createElement("div");
+    const importantCbox = document.createElement("input");
+    importantCbox.type = "checkbox";
+    if (obj.isImportant === true) {
+      importantCbox.checked = true;
+    } else {
+      importantCbox.checked = false;
+    }
+    importantCbox.addEventListener("change", () => (obj.isImportant = true));
+    important.classList.add("important");
+    important.textContent = "Important:";
     // append
-    line.appendChild(deleteTask);
-    line.appendChild(editTask);
-    line.appendChild(number);
-    line.appendChild(check);
-    line.appendChild(item);
+    line1.appendChild(deleteTask);
+    line1.appendChild(editTask);
+    line1.appendChild(number);
+    line1.appendChild(check);
+    line1.appendChild(created);
+    line1.appendChild(important);
+    line1.appendChild(importantCbox);
+    line1.appendChild(item);
   });
-}
-
-isImportant = false;
-function setImportant() {
-  isImportant = true;
 }
 
 const create = document.querySelector(".create");
@@ -120,3 +179,16 @@ create.addEventListener("click", addItem);
 const important = document.querySelector("#important");
 
 important.addEventListener("change", setImportant);
+const completed = document.querySelector("#sort-completed");
+completed.addEventListener("click", sortCompleted);
+const byImportant = document.querySelector("#sort-important");
+byImportant.addEventListener("click", sortImportant);
+const byDate = document.querySelector("#sort-date");
+byDate.addEventListener("click", sortByDate);
+
+function sortByDate() {
+  todoList.sort((a, b) =>
+    a.created > b.created ? 1 : b.created > a.created ? -1 : 0
+  );
+  list();
+}
