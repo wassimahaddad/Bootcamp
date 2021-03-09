@@ -1,31 +1,26 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .flex-container {
-    display: flex;
-    background:burlywood;
-    justify-content: space-between;
-    
+  display: flex;
+  flex-wrap: wrap;
+  background: burlywood;
 }
 
-.flex-container div {       
-    width:100px;
-    height:100px;     
+.flex-container div {
+  width: 100px;
+  height: 100px;
 }
 
 .item1 {
-    
-    background:red;
+  background: red;
 }
 .item2 {
-
-    background:green;
+  background: green;
 }
 .item3 {
-    
-    background: blue;
+  background: blue;
 }
