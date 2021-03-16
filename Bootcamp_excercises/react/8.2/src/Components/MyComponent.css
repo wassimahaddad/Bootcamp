@@ -1,0 +1,39 @@
+.big {
+  width: 200px;
+  height: 200px;
+  background-color: blueviolet;
+  margin-top: 10px;
+}
+.medium {
+  width: 150px;
+  height: 150px;
+  background-color: blueviolet;
+  margin-top: 10px;
+}
+.small {
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+  margin-top: 10px;
+}
+
+.animate {
+  animation-name: move;
+  animation-duration: 1s;
+
+  animation-fill-mode: forwards; /**stays where it's at*/
+  animation-timing-function: ease-in;
+}
+@keyframes move {
+  from {
+    transform: translateX(-200px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.hide {
+  display: none;
+}

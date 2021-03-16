@@ -6,7 +6,7 @@ class MyComponent extends React.Component {
     setTimeout(() => {
       console.log("mounted");
       this.setState({ favoriteColor: "red" });
-    }, 1);
+    }, 1000);
   }
 
   componentDidUpdate() {
