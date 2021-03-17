@@ -17,7 +17,6 @@ class App extends React.Component {
         {colors.map((color) => (
           <div>
             <CustomButton
-              className={this.setColor(color)}
               getColor={this.setColor(color)}
               onClick={this.handleClick}
             />
