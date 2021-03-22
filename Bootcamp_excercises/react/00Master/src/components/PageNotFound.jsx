@@ -1,7 +1,7 @@
 import React from "react";
 
-const Homepage = () => {
+const LandingPage = () => {
   return <div className="home"> Page not found</div>;
 };
 
-export default Homepage;
+export default LandingPage;
