@@ -1,0 +1,23 @@
+.container {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+.joke {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  margin-right: 3px;
+  width: 60px;
+}
+
+.random {
+  width: 123px;
+}
