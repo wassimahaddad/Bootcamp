@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Page from "./Page";
 
 const CnJokes = () => {
-  const [showPage, setShowPage] = useState(true);
+  const [showPage, setShowPage] = useState(false);
 
   return (
     <div className="container">
