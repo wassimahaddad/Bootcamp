@@ -29,4 +29,4 @@ fetch(url)
   .then((body) =>
     console.log("provided by node-fetch:", JSON.parse(body).message)
   )
-  .catch((err) => console.log("unable to connect"));
+  .catch(() => console.log("unable to connect"));
