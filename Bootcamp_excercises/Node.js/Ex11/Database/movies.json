@@ -1,0 +1,23 @@
+[
+  {
+    "id": 238,
+    "title": "The Godfather",
+    "rating": 8.7,
+    "genre": ["Drama", "Crime"],
+    "length": 175
+  },
+  {
+    "id": 291545,
+    "title": "Parasite",
+    "rating": 8.5,
+    "genre": ["Drama", "Comedy", "Thriller"],
+    "length": 132
+  },
+  {
+    "id": 278,
+    "title": "some movie",
+    "rating": 8.7,
+    "genre": ["Drama", "Crime"],
+    "length": 144
+  }
+]
