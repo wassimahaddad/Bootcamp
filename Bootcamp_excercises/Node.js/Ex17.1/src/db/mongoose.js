@@ -11,6 +11,7 @@ const Product = mongoose.model("Product", {
   name: {
     type: String,
     required: true,
+    unique: true,
   },
   category: {
     type: String,
@@ -114,19 +115,19 @@ product
   .catch((error) => {
     console.log("Error!", error);
   });
-product2
-  .save()
-  .then(() => {
-    console.log(product2);
-  })
-  .catch((error) => {
-    console.log("Error!", error);
-  });
-product3
-  .save()
-  .then(() => {
-    console.log(product3);
-  })
-  .catch((error) => {
-    console.log("Error!", error);
-  });
+// product2
+//   .save()
+//   .then(() => {
+//     console.log(product2);
+//   })
+//   .catch((error) => {
+//     console.log("Error!", error);
+//   });
+// product3
+//   .save()
+//   .then(() => {
+//     console.log(product3);
+//   })
+//   .catch((error) => {
+//     console.log("Error!", error);
+//   });
