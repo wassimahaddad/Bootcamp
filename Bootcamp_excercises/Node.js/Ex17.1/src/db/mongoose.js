@@ -7,6 +7,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/ecommerce", {
   useUnifiedTopology: true,
 });
 
+const a = 1;
 const Product = mongoose.model("Product", {
   name: {
     type: String,
