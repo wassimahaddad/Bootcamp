@@ -111,23 +111,30 @@ product
   .save()
   .then(() => {
     console.log(product);
+    mongoose.disconnect();
   })
   .catch((error) => {
     console.log("Error!", error);
+    mongoose.disconnect();
   });
-// product2
-//   .save()
-//   .then(() => {
-//     console.log(product2);
-//   })
-//   .catch((error) => {
-//     console.log("Error!", error);
-//   });
-// product3
-//   .save()
-//   .then(() => {
-//     console.log(product3);
-//   })
-//   .catch((error) => {
-//     console.log("Error!", error);
-//   });
+
+product2
+  .save()
+  .then(() => {
+    console.log(product2);
+    mongoose.disconnect();
+  })
+  .catch((error) => {
+    console.log("Error!", error);
+    mongoose.disconnect();
+  });
+product3
+  .save()
+  .then(() => {
+    console.log(product3);
+    mongoose.disconnect();
+  })
+  .catch((error) => {
+    console.log("Error!", error);
+    mongoose.disconnect();
+  });
